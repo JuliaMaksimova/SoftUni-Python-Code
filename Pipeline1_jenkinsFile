@@ -1,11 +1,12 @@
 pipeline {
     agent {
-        node {
-            label 'Julu_PC'
-            }
-      }
-      triggers {
+        label 'Julu_PC'
+    }
+
+    triggers {
         pollSCM('H/5 * * * *')
+    }
+
     stages {
         stage('Build') {
             steps {
